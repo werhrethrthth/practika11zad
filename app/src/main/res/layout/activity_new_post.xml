@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NewPostActivity">
+
+  <EditText
+      android:id="@+id/edit"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@android:color/transparent"
+      android:gravity="start|top"
+      android:inputType="textMultiLine"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      tools:ignore="SpeakableTextPresentCheck"
+      tools:layout_editor_absoluteY="-56dp" />
+
+  <com.google.android.material.bottomappbar.BottomAppBar
+      android:id="@+id/bottomAppBar"
+      style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      app:backgroundTint="@color/cardview_dark_background"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="1.0"
+      tools:ignore="BottomAppBar,MissingConstraints" />
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/ok"
+      android:layout_width="wrap_content"
+      android:layout_height="73dp"
+      android:contentDescription="@string/description_post_save"
+      app:backgroundTint="@color/purple_200"
+      app:layout_anchor="@+id/bottomAppBar"
+      app:layout_anchorGravity="center"
+      app:layout_constraintBottom_toBottomOf="@+id/edit"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/edit"
+      app:layout_constraintVertical_bias="1.0"
+      app:srcCompat="@android:drawable/sym_action_email"
+      tools:ignore="MissingConstraints" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
